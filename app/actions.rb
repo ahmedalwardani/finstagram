@@ -17,6 +17,20 @@ end
         "#{time_ago_in_minutes} minutes ago"
     end
 end
+# get '/' do
+#   "Hello world!"
+# end
+
+def get_humanized_time_ago (time_ago_in_minutes)
+    if time_ago_in_minutes >= 60
+        "#{time_ago_in_minutes/60} hours ago"
+
+    else
+        "#{time_ago_in_minutes} minutes ago"
+    end
+end
+
+get '/' do
     finstagram_post_shark = {
     username: "sharky_j",
     avatar_url: "http://naserca.com/images/sharky_j.jpg",
@@ -31,6 +45,9 @@ end
     }
 
     finstagram_post_whale = {
+}
+
+  finstagram_post_whale = {
     username: "kirk_whalum",
     avatar_url: "http://naserca.com/images/kirk_whalum.jpg",
     photo_url: "http://naserca.com/images/whale.jpg",
@@ -38,12 +55,21 @@ end
     like_count: 0,
     comment_count: 1,
     comments: [{
+<<<<<<< HEAD
         username: "kirk_whalum",
         text: "#weekendvibes"
     }]
     }
 
     finstagram_post_marlin = {
+=======
+      username: "kirk_whalum",
+      text: "#weekendvibes"
+    }]
+  }
+
+  finstagram_post_marlin = {
+>>>>>>> a013f0b11c066b1d67df2728e86dd0e082c7c1fa
     username: "marlin_peppa",
     avatar_url: "http://naserca.com/images/marlin_peppa.jpg",
     photo_url: "http://naserca.com/images/marlin.jpg",
@@ -53,6 +79,7 @@ end
         username: "marlin_peppa",
         text: "Shawerma Palace time! ;)"
     }]
+<<<<<<< HEAD
     }
 
     posts_array = [finstagram_post_shark, finstagram_post_whale, finstagram_post_marlin]
@@ -71,3 +98,11 @@ end
 #     end
 # end
 
+=======
+  }
+
+posts_array = [finstagram_post_shark, finstagram_post_whale, finstagram_post_marlin]
+posts_array.to_s
+
+end
+>>>>>>> a013f0b11c066b1d67df2728e86dd0e082c7c1fa
